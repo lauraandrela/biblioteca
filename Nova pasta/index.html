@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Comunitária - Cadastro e Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>📚 Biblioteca Comunitária</h1>
+            <p class="subtitle" id="subtitulo">Cadastro de Leitor</p>
+
+            <div class="tabs">
+                <button type="button" class="tab ativo" id="tabCadastro"
+                    onclick="mostrarAba('cadastro')">Cadastro</button>
+                <button type="button" class="tab" id="tabLogin" onclick="mostrarAba('login')">Login</button>
+            </div>
+
+            <form id="formCadastro" novalidate>
+                <div class="input-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" placeholder="Ex.: Maria Silva">
+                    <small class="dica" id="erro-nome"></small>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="maria@email.com">
+                    <small class="dica" id="erro-email"></small>
+                </div>
+                <div class="input-group">
+                    <label for="senha">Senha <span class="regra">(mín. 6 caracteres e 1 número)</span></label>
+                    <input type="password" id="senha">
+                    <small class="dica" id="erro-senha"></small>
+                </div>
+                <div class="input-group">
+                    <label for="confirmar">Confirmar senha</label>
+                    <input type="password" id="confirmar">
+                    <small class="dica" id="erro-confirmar"></small>
+                </div>
+                <button type="button" id="btnCadastrar" onclick="cadastrar()">Cadastrar</button>
+                <p id="mensagem" class="mensagem" role="alert"></p>
+            </form>
+
+            <form id="formLogin" class="oculto" novalidate>
+                <div class="input-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail">
+                </div>
+                <div class="input-group">
+                    <label for="loginSenha">Senha</label>
+                    <input type="password" id="loginSenha">
+                </div>
+                <button type="button" id="btnEntrar" onclick="login()">Entrar</button>
+                <p id="mensagemLogin" class="mensagem" role="alert"></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

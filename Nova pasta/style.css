@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    max-width: 420px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+    animation: fadeIn .5s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #777;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    background: #eef2f5;
+    color: #555;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.tab.ativo {
+    background: #185a9d;
+    color: #fff;
+}
+
+.tab:hover {
+    transform: scale(1.03);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+}
+
+.regra {
+    font-size: 12px;
+    color: #999;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    transition: .3s;
+}
+
+.input-group input:focus {
+    border-color: #185a9d;
+    outline: none;
+}
+
+input.erro {
+    border: 2px solid red;
+    background: #fff5f5;
+}
+
+input.sucesso {
+    border: 2px solid green;
+}
+
+.dica {
+    display: block;
+    min-height: 14px;
+    margin-top: 3px;
+    color: red;
+    font-size: 12px;
+}
+
+button#btnCadastrar,
+button#btnEntrar {
+    width: 100%;
+    padding: 12px;
+    background: #185a9d;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button#btnCadastrar:hover,
+button#btnEntrar:hover {
+    background: #0d3f73;
+    transform: scale(1.03);
+}
+
+.mensagem {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.oculto {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
